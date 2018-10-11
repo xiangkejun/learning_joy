@@ -14,5 +14,5 @@
   <param name="axis_angular" value="2" type="int"/>
   <param name="scale_linear" value="2" type="double"/>
   <param name="scale_angular" value="2" type="double"/>
-  <node pkg="learning_joy" type="joy_chuan_xx" name="teleop"/>
+  <node pkg="learning_joy" type="joy_chuan_pi" name="teleop"/>
 </launch>

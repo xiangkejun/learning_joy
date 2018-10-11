@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
+set(wiringPi_include "/usr/local/include")
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -118,7 +119,10 @@ catkin_package(
 include_directories(
  include
   ${catkin_INCLUDE_DIRS}
+  ${wiringPi_include}
 )
+
+LINK_DIRECTORIES("/usr/local/lib")
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -210,3 +214,6 @@ target_link_libraries(joy_chuan_xx ${catkin_LIBRARIES})
 
 ##add_executable(joy_thread_xx src/joy_thread_xx.cpp)
 ##target_link_libraries(joy_thread_xx ${catkin_LIBRARIES})
+
+add_executable(joy_chuan_pi src/joy_chuan_pi.cpp)
+target_link_libraries(joy_chuan_pi ${catkin_LIBRARIES} wiringPi)

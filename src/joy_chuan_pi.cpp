@@ -27,7 +27,7 @@
 int speed_arr[] = { B38400, B19200, B9600, B4800, B2400, B1200, B300,
 B38400, B19200, B9600, B4800, B2400, B1200, B300, };
 
-#define LED 1  // 14号引脚 第2数第6个
+#define LED 1  // 1号引脚 第2排数第6个
 
 int set_opt(int fd3,int nSpeed, int nBits, char nEvent, int nStop)   //配置串口参数
 {   //cout<<lat_1<<endl;
